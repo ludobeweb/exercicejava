@@ -13,14 +13,14 @@ import exercice1.heritage.animaux.entities.Animal;
  */
 public class Tripoteur {
     
-    public String prenom = "";
-    public void tripote(Animal animal){
-        this.prenom = "Francois";
-        System.out.println(this.getClass().getDeclaredMethods()
-        [0].getName() + " " + animal.getClass().getSimpleName());
-        animal.emettreSon();
-        System.out.println(prenom + "Force "
-        + animal.getClass().getSimpleName());
-        animal.son = "hurle";
+    
+    public void tripote(Tripotable a){
+        
+        System.out.println(this.getClass().getSimpleName() + " " + 
+                this.getClass().getDeclaredMethods()[0].getName() + " "
+        + a.getClass().getSimpleName());
+        if (a instanceof Animal){
+            ((Animal)a).emettreSon();
+        }
     }
 }

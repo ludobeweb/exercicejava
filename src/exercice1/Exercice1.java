@@ -5,7 +5,8 @@
  */
 package exercice1;
 
-import exercice1.heritage.Heritage;
+import exercice1.core.Application;
+import exercice1.recursivite.suites.fibonacci.SuiteFibo;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Exercice1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-       Heritage exo1 = new Heritage();
+       Application exo1 = new SuiteFibo();
        exo1.start();
     }
     
